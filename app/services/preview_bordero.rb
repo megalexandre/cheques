@@ -1,4 +1,4 @@
-class CalculateBordero
+class PreviewBordero
   def initialize(bordero_data)
     @bordero_data = bordero_data
   end

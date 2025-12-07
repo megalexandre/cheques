@@ -1,37 +1,12 @@
 class BorderosController < ApplicationController
-  # POST /borderos
-  def create
-    render json: CreateBordero.new(bordero_params).call, status: :created
-  end
+  # POST /borderos/preview
+  def preview
+    bordero_preview_form = BorderoPreviewForm.new(params)
 
-  # POST /borderos/calculate
-  def calculate
-    render json: CalculateBordero.new(calculate_params).call, status: :ok
-  end
-
-  private
-
-  def calculate_params
-    params.permit(
-      :data_troca,
-      :juros_mensal,
-      cheques: [
-        :valor_cheque,
-        :data_vencimento,
-        :dias_compensacao
-      ]
-    ).to_h.deep_symbolize_keys
-  end
-
-  def bordero_params
-    params.permit(
-      :data_troca,
-      :juros_mensal,
-      cheques: [
-        :valor_cheque,
-        :data_vencimento,
-        :dias_compensacao
-      ]
-    )
+    if bordero_preview_form.valid?
+      render json: bordero_preview_form.to_h, status: :ok
+    else
+      render json: { errors: bordero_preview_form.errors.full_messages }, status: :bad_request
+    end
   end
 end

@@ -1,2 +1,12 @@
 en:
   hello: "Hello world"
+  
+  activemodel:
+    attributes:
+      bordero_preview_form:
+        exchange_date: "Exchange date"
+        monthly_interest: "Monthly interest"
+      bordero_preview_form/cheque_form:
+        value: "Value"
+        due_date: "Due date"
+        processing_days: "Processing days"

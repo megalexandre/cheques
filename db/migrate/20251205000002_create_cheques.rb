@@ -1,12 +1,12 @@
 class CreateCheques < ActiveRecord::Migration[8.1]
   def change
-    create_table :cheques, id: :uuid do |t|
-      t.uuid :bordero_id, null: false
-      t.decimal :valor_cheque, precision: 10, scale: 2, null: false
-      t.date :data_vencimento, null: false
-      t.integer :dias_compensacao, null: false
+    create_table :cheques, id: :uuid do |c|
+      c.integer :value, null: false, default: 0
+      c.integer :processing_days, null: false, default: 0
+      c.date :due_date, null: false
+      c.timestamps
 
-      t.timestamps
+      c.uuid :bordero_id, null: false
     end
 
     add_foreign_key :cheques, :borderos

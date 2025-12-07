@@ -57,3 +57,30 @@ pt-BR:
       default: "%d/%m/%Y %H:%M"
       short: "%d/%m %H:%M"
       long: "%d de %B de %Y, %H:%M"
+  
+  activemodel:
+    errors:
+      messages:
+        blank: "não pode ficar em branco"
+        invalid: "é inválido"
+        greater_than: "deve ser maior que %{count}"
+        greater_than_or_equal_to: "deve ser maior ou igual a %{count}"
+        less_than: "deve ser menor que %{count}"
+        less_than_or_equal_to: "deve ser menor ou igual a %{count}"
+        not_a_number: "não é um número"
+    attributes:
+      bordero_preview_form:
+        exchange_date: "Data de desconto"
+        monthly_interest: "Taxa de juros mensal"
+      bordero_preview_form/cheque_form:
+        value: "Valor"
+        due_date: "Data de vencimento"
+        processing_days: "Dias de processamento"
+  
+  errors:
+    messages:
+      blank: "não pode ficar em branco"
+      invalid: "é inválido"
+      greater_than: "deve ser maior que %{count}"
+      greater_than_or_equal_to: "deve ser maior ou igual a %{count}"
+      not_a_number: "não é um número"

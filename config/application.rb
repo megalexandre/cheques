@@ -16,6 +16,9 @@ module Cheques
     # Common ones are `templates`, `generators`, or `middleware`, for example.
     config.autoload_lib(ignore: %w[assets tasks])
 
+    # Autoload forms directory
+    config.autoload_paths << Rails.root.join("app/forms")
+
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files
@@ -26,7 +29,8 @@ module Cheques
 
     # Configuração de locale e formato de data brasileiro
     config.time_zone = "Brasilia"
-    config.i18n.default_locale = :'pt-BR'
+    config.i18n.default_locale = :en
+    config.i18n.available_locales = [ :en, :'pt-BR' ]
 
     # Only loads a smaller set of middleware suitable for API only apps.
     # Middleware like session, flash, cookies can be added back manually.

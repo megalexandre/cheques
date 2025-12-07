@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.1].define(version: 2025_12_05_000002) do
+ActiveRecord::Schema[8.1].define(version: 2025_12_06_164438) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
   enable_extension "pgcrypto"
@@ -29,6 +29,7 @@ ActiveRecord::Schema[8.1].define(version: 2025_12_05_000002) do
     t.integer "dias_compensacao", null: false
     t.datetime "updated_at", null: false
     t.decimal "valor_cheque", precision: 10, scale: 2, null: false
+    t.integer "valor_cheque_cents"
     t.index ["bordero_id"], name: "index_cheques_on_bordero_id"
   end
 
