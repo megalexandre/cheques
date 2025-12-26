@@ -27,7 +27,7 @@ Funcionalidade: Borderô
     {
         "exchange_date":"2025-11-27", 
         "monthly_interest":"2.5",
-        "total_cheques_value":"5000.0",
+        "total_amount":"5000.0",
         "cheques":
         [
             {
@@ -67,7 +67,7 @@ Funcionalidade: Borderô
     {
         "exchange_date":"2025-11-27", 
         "monthly_interest":"2.5",
-        "total_cheques_value":"3000.0",
+        "total_amount":"3000.0",
         "cheques":
         [
             {
@@ -108,7 +108,7 @@ Funcionalidade: Borderô
     {
         "exchange_date":"2025-11-27", 
         "monthly_interest":"2.5",
-        "total_cheques_value":"3000.0",
+        "total_amount":"3000.0",
         "cheques":
         [
             {

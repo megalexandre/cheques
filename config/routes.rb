@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :cheques
   get "bank_holidays/index"
   get "bank_holidays/show"
   get "bank_holidays/create"

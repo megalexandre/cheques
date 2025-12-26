@@ -16,14 +16,14 @@ class CalculateBordero
 
     @bordero_data.merge(
       monthly_interest: @bordero_data[:monthly_interest].to_d.round(5),
-      total_cheques_value:,
+      total_amount:,
       cheques: calculated_cheques
     )
   end
 
   private
 
-  def total_cheques_value
+  def total_amount
     @bordero_data[:cheques].sum { |cheque| cheque[:value] }
   end
 end
