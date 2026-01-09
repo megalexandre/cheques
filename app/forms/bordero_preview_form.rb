@@ -15,7 +15,7 @@ class BorderoPreviewForm
 
   validate :validate_cheques
   validate :validate_cheques_presence
-  validate :validate_exchange_date_future
+  # validate :validate_exchange_date_future
 
   PERMITTED_PARAMS = {
     bordero: [ :exchange_date, :monthly_interest ],

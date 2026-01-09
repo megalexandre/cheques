@@ -12,8 +12,8 @@ class ChequeCalculator
   def to_h
     {
       value: @value.to_d,
-      due_date: @due_date,
       effective_due_date:,
+      due_date: @due_date,
       processing_days: @processing_days,
       days_count:,
       total_interest: total_interest_percentage,
@@ -25,11 +25,21 @@ class ChequeCalculator
   private
 
   def effective_due_date
-    target_date = @due_date + @processing_days
+    target_date = @due_date
 
-    # Pula finais de semana e feriados bancários
+    # 1. Garante que a data inicial (vencimento) seja um dia útil
     while weekend?(target_date) || bank_holiday?(target_date)
       target_date += 1
+    end
+
+    # 2. Adiciona os dias de processamento, um por um, pulando dias não úteis
+    days_to_add = @processing_days
+    while days_to_add > 0
+      target_date += 1
+      # Só decrementa o contador se o novo dia for útil
+      unless weekend?(target_date) || bank_holiday?(target_date)
+        days_to_add -= 1
+      end
     end
 
     target_date

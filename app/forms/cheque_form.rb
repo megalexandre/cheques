@@ -14,7 +14,7 @@ class ChequeForm
   validates_date_format :due_date
   validates_integer_format :processing_days
 
-  validate :validate_due_date_future
+  # validate :validate_due_date_future
 
   attr_reader :raw_due_date, :raw_processing_days
 
