@@ -82,3 +82,8 @@ jobs:
           context: .
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/cheques-api:latest,${{ secrets.DOCKER_USERNAME }}/cheques-api:${{ github.sha }}
+
+      - name: Deploy to Coolify
+        run: |
+          curl -X GET "https://admin.smart4bizz.shop/api/v1/deploy?uuid=skgw0ks0skk44kcsggcowwsc&force=false" \
+            -H "Authorization: Bearer ${{ secrets.COOLIFY_TOKEN }}"
