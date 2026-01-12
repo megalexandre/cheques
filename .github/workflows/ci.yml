@@ -81,4 +81,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/cheques:latest,${{ secrets.DOCKER_USERNAME }}/cheques:${{ github.sha }}
+          tags: ${{ secrets.DOCKER_USERNAME }}/cheques-api:latest,${{ secrets.DOCKER_USERNAME }}/cheques-api:${{ github.sha }}
