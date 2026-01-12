@@ -9,4 +9,5 @@ to test:
     cucumber 
 
 to build imagem: 
-    docker build -t alexandreqrz/cheques-api:1.0.0 . 
+    docker build -t alexandreqrz/cheques-api:latest . 
+    docker push alexandreqrz/cheques-api:latest 
