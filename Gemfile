@@ -42,7 +42,7 @@ gem "prometheus-client"
 
 # Fix ambiguous gem warnings
 gem "drb", "~> 2.2.3"
-gem "irb", "~> 1.15"
+gem "irb", "~> 1.17"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
